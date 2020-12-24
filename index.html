@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Pifomètre</title>
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+      display: table
+    }
+
+    #c {
+      margin: 1em;
+      color: #888;
+      bottom: 0;
+      position: absolute
+    }
+
+    body {
+      background: #FCF8EF;
+      position: relative;
+      margin: 0;
+      display:
+        table-cell;
+      height: 100%;
+      vertical-align: middle;
+      background: #FCF8EF;
+      color: #333;
+      font:
+        16px Tahoma, sans-serif
+    }
+
+    #box {
+      cursor: pointer;
+      padding: 2em 1em 5em;
+      text-align: center;
+      max-width: 400px;
+      margin: auto
+    }
+
+    #pif {
+      font-size: 2em;
+      line-height: 2.2
+    }
+
+    strong {
+      font-size: 2em;
+      line-height: 1;
+      color: #000;
+      vertical-align: top
+    }
+
+    p+p {
+      text-align: right;
+      font-style: italic;
+      font-family: serif
+    }
+
+    a {
+      color: navy
+    }
+
+    * {
+      transition: all .2s
+    }
+  </style>
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+
+<body>
+  <div id="box" tabindex="1">
+    <p id="pif">Chargement du Pifomètre</p>
+    <p>Une autre
+      statistique pifométrique&nbsp;? [<span id="i"></span>]</p>
+  </div>
+  <p id="c">
+    <a href="http://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Pastiches/Pifom%C3%A8tre">
+      Plus d'infos</a> -
+    <a href="https://twitter.com/OpifOpinion">Institut de sondage</a>
+  </p>
+  <script>
+    var a = [
+      ["Il y a ", plusboucoup, " millions de personnes qui dorment dans le monde en ce moment"],
+      ["Aujourd'hui, le Pérou a eu ", tresbocoup, " naissances"],
+      ["On dénombre ", bocoup, " avions au dessus de la France à cet instant"],
+      ["Environ ", unpeu, " millions de clous ont été vendus cette année"],
+      ["Un bureau moyennement encombré compte ", quelqueuh, " stylos, contre ", pasmal, " pour un bureau très encombré"],
+      [unpeu, " est le nombre moyen de marins dans un bateau de pêche traditionnelle"],
+      ["On estime qu'il y a ", plusboucoup, " mégaoctets de photos envoyées chaque seconde sur Facebook"],
+      ["Il y avait ", plusboucoup, " spectateurs dans les cinémas lyonnais hier soir"],
+      [pasmal, " employés américains sur 100 consultent Facebook au travail"],
+      ["L'Italie exporte ", plusboucoup, " véhicules de luxe par an"],
+      ["On dénombre ", plusboucoup, " SMS envoyés cette seconde en Europe"],
+      ["Les clubs espagnols de football ont ", bocoupbocoup, " licenciés cette année"],
+      ["Il y a ", bocoupbocoup, " iPhones dans le monde dont la batterie est 42% actuellement"],
+      ["Environ ", bocoup, " pétaoctets de fichiers ont été placé dans la Corbeille aujourd'hui aux États-Unis"],
+      ["Le Brésil a exporté ", bocoupbocoup, " tonnes de soja hier"],
+      ["Un orteil est cogné contre le coin d'un lit parisien toutes les ", unpeu, " secondes"],
+      ["En Nouvelle-Zélande, un iPhone tombe et se casse toutes les ", unpeu, " secondes"],
+      ["On a ", pasmal, " fois plus de chance de tomber en courant qu'en marchant"],
+      ["Moins de ", unpeu, " français sur 100 savent marcher sur les mains"],
+      ["Un téléphone portable passe ", bocoup, " jours par an dans une poche"],
+      ["Twitter fait perdre en moyenne ", pasmal, " minutes par jour"],
+      ["Les canadiens mangent ", quelqueuh, " fois plus de frites que d'épinards"],
+      ["Chaque année sont gaspillées ", tresbocoup, " tonnes de peinture bleue en Inde"],
+      ["On passe en moyenne ", quelqueuh, " jours de notre vie à démêler des câbles"],
+      ["La Maison-Blanche reçoit ", tresbocoup, " lettres destinées au Père-Noël chaque année"],
+      ["Chaque mois, le Mexique importe ", pasmal, " tonnes de dentifrice"],
+      ["L'heure est affichée ", quelqueuh, " fois dans un foyer suisse"],
+      ["Les surligneurs sont ", unpeu, " fois plus vendus que les crayons de couleur"],
+      ["Moins de ", unpeu, " internautes sur 100 tiennent leur version de Java à jour"],
+      ["Le rugby est la raison de ", tresbocoup, " fractures par an à Toulouse"],
+      ["Les brésiliens achètent une nouvelle ceinture tous les ", unpeu, " mois"],
+      ["On fait en moyenne ", pasmal, " pas pour se rendre aux toilettes"],
+      ["Les français marchent ", bocoup, " mètres par mois en cherchant leurs clés"],
+      ["Il faut en moyenne ", quelqueuh, " secondes pour avoir de l'eau chaude depuis un robinet en Angleterre"],
+      ["On maigrit de ", quelqueuh, " grammes chaque nuit"],
+      ["Il faut ", pasmal, " flocons de neige pour faire un centimètre cube d'eau"],
+      [pasmal, " bibliothécaires sur 100 sont des auteurs frustrés"],
+      [plusboucoup, " canadiens ont réclamé des cookies au travail hier"],
+      ["Les russes devraient dormir ", pasmal, " minutes de plus par nuit"],
+      [plusboucoup, " kilogrammes de volaille ont été consommés cette seconde"],
+      ["Chaque minute, ", unpeu, " kilogrammes de bonbons sont mangés à Lille"],
+      ["Un brestois éternue ", plusboucoup, " fois par an"],
+      [plusboucoup, " personnes écoutent une chanson de System Of A Down en ce moment"],
+      ["Les français se grattent le nez ", pasmal, " secondes par jour"],
+      [pasmal, " est le nombre moyen de caractères dans un titre de vidéo Youtube"],
+      ["Un stylo plume dépense ", pasmal, " centilitres d'encre par kilomètre écrit"],
+      ["Un melon pèse en moyenne ", tresbocoup, " grammes"],
+      [bocoupbocoup, " personnes se sont faites rickrolled aujourd'hui"],
+      ["Les titres de vidéo sur YouTube comportent en moyenne ", quelqueuh, " caractères"],
+      ["On se touche le visage ", unpeu, " fois par minute"],
+      ["Une clé pèse environ ", quelqueuh, " grammes"]
+    ];
+    var _ = document, b = [], h = _.getElementById('i'), c = _.getElementById('pif'), d = _.getElementById('box');
+    function ok() {
+      b[0] || (b = a.slice()); for (var e = 0, f = b.splice(pif(0, b.length), 1)[0]
+        , g = ""; e < f.length; e++)g += "string" === typeof f[e] ? f[e] : ("<strong>" + f[e]()).replace(
+          /(\d)(\d{3})$/, "$1&nbsp;$2") + "</strong>"; c.style.opacity = 0; setTimeout(function () { c.style.opacity = 1; c.innerHTML = g; }, 200); h.innerHTML = b.length
+    }
+    (d.onclick = d.onkeydown = ok)();
+    function pif(a, b) { return Math.random() * (b - a) + a | 0 }
+    function unpeu() { return pif(2, 13) }
+    function quelqueuh() { return pif(11, 29) }
+    function pasmal() { return pif(36, 68) }
+    function bocoup() { return pif(89, 213) }
+    function tresbocoup() { return pif(468, 1277) }
+    function plusboucoup() { return pif(1431, 3978) }
+    function bocoupbocoup() { return pif(48333, 198432) }
+  </script>
+</body><!-- Franchement, pire idée du monde. -->
+
+</html>
